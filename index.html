@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Encryptor</title>
+    <link rel="stylesheet" href="./Style/Style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img class="Logo" src="./assets/Logo.png" alt="Logo">
+            <h1>Text Encryptor</h1>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <!--Panel Izquierdo-->
+            <div class="left-section">
+                <textarea id="inputText" placeholder="Escribe tu texto aquí..."></textarea>
+                <p class="warning-text">Solo se permiten letras minúsculas y sin acentos.</p>
+                <!--Botones-->
+                <div class="buttons">
+                    <button class="btn-Encriptar" onclick="handleEncrypt()">Encriptar</button>
+                    <button class="btn-Desencriptar" onclick="handleDecrypt()">Desencriptar</button>
+                    <button class="btn-Limpiar" onclick="clearFields()">Limpiar</button>
+                </div>
+            </div>
+        
+            <!--Panel Derecho-->
+            <div class="right-section">
+                <textarea id="outputText" placeholder="Aquí aparecerá el texto encriptado/desencriptado" readonly></textarea>
+                <button id="copyButton" class="copy-button" onclick="copyText()">Copiar Texto</button>
+                <p id="notification" style="display: none;">Texto copiado</p>
+                <img id="outputImage" src="./assets/personaje.png" alt="Personaje">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Hecho por: Vanessa Vergara User:kvanessavergra</p>
+    </footer>
+
+    <!-- Archivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
